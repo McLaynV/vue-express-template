@@ -9,7 +9,7 @@
     "start": "node dist/server/src/app.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
     "cors": "^2.8.5",
