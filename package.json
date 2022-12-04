@@ -1,12 +1,14 @@
 {
   "name": "vue-express-template",
   "scripts": {
-    "postinstall": "npm --prefix ./client install && npm --prefix ./server install",
-    "dev:client": "npm --prefix ./client run dev",
-    "dev:server": "npm --prefix ./server run dev",
+    "install:client": "cd client && npm install && cd ..",
+    "install:server": "cd server && npm install && cd ..",
+    "postinstall-unused": "npm run install:client && npm run install:server",
+    "dev:client": "cd client && npm run dev && cd ..",
+    "dev:server": "cd server && npm run dev && cd ..",
+    "build:client": "cd client && npm run build && cd ..",
+    "build:server": "cd server && npm run build && cd ..",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "npm --prefix ./client run build",
-    "build:server": "npm --prefix ./server run build",
     "lint:fix": "eslint ./ --ext .jsx,.js,.ts,.tsx,.vue --quiet --fix --ignore-path ./.gitignore",
     "lint:format": "prettier --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,vue,css,md,json}\" ",
     "lint": "npm run lint:format && npm run lint:fix"
