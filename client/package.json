@@ -20,10 +20,5 @@
     "typescript": "^4.6.2",
     "vite": "^2.8.5",
     "vue-tsc": "^0.32.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
