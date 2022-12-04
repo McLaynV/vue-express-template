@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="install (paralel)" type="CompoundRunConfigurationType">
+  <configuration default="false" name="install (parallel)" type="CompoundRunConfigurationType">
     <toRun name="install:_" type="js.build_tools.npm" />
     <toRun name="install:client" type="js.build_tools.npm" />
     <toRun name="install:server" type="js.build_tools.npm" />
