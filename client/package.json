@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test-cypress-open": "cypress open"
   },
   "dependencies": {
     "@vueuse/core": "^7.7.0",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.4",
+    "cypress": "^12.1.0",
     "sass": "^1.49.9",
     "typescript": "^4.6.2",
     "vite": "^2.8.5",

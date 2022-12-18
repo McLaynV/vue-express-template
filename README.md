@@ -18,6 +18,11 @@ Using:
 - [Sass](https://sass-lang.com/)
 - [Vue setup syntax](https://vuejs.org/api/sfc-script-setup.html)
 
+...and testing frameworks: 
+
+- [Vitest](https://vitest.dev/) for backendish stuff
+- [Cypress](https://www.cypress.io/) for GUI components
+
 This template repo exists as a monorepo template,
 allowing you to clone and deploy a single repository for your entire app.
 Additionally, it also contains linting configuration,

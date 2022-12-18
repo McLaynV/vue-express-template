@@ -18,11 +18,14 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "types": [
-      "vite/client"
+      "vite/client",
+      "cypress"
     ]
   },
   "include": [
     "./src",
-    "../shared"
+    "../shared",
+    "node_modules/cypress/types/cypress-global-vars.d.ts",
+    "cypress/support/component.ts"
   ]
 }

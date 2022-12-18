@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import { getSpeedruns, submitSpeedrun } from "../api/speedruns";
-import { useStore } from "../config/store";
+import {onMounted} from "vue";
+import {getSpeedruns, submitSpeedrun} from "../api/speedruns";
+import {useStore} from "../config/store";
 
 const store = useStore();
 const props = defineProps<{ totalTime: number; username: string }>();
@@ -14,7 +14,7 @@ onMounted(() => {
   }).then(async (response) => {
     store.submittedRun = response;
 
-    // Get latest top times & user times from API
+    // Get the latest top times & user times from API
     [store.topResults, store.userResults] = await Promise.all([
       getSpeedruns(),
       getSpeedruns(store.submittedRun.userId),
@@ -49,22 +49,22 @@ function msToElapsedString(totalms: number): string {
       <h4>Global top times</h4>
       <table className="table is-bordered is-striped is-fullwidth">
         <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Time</th>
-          </tr>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Time</th>
+        </tr>
         </thead>
         <tbody>
-          <tr
+        <tr
             v-for="(result, index) in store.topResults"
             :key="index"
             :class="store.submittedRun?.id === result.id ? 'is-selected' : ''"
-          >
-            <th>{{ index + 1 }}</th>
-            <td>{{ result.username }}</td>
-            <td>{{ msToElapsedString(result.totalTimeMilliseconds) }}</td>
-          </tr>
+        >
+          <th>{{ index + 1 }}</th>
+          <td>{{ result.username }}</td>
+          <td>{{ msToElapsedString(result.totalTimeMilliseconds) }}</td>
+        </tr>
         </tbody>
       </table>
     </div>
@@ -72,22 +72,22 @@ function msToElapsedString(totalms: number): string {
       <h4>Your top times</h4>
       <table className="table is-bordered is-striped is-fullwidth">
         <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Time</th>
-          </tr>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Time</th>
+        </tr>
         </thead>
         <tbody>
-          <tr
+        <tr
             v-for="(result, index) in store.userResults"
             :key="index"
             :class="store.submittedRun?.id === result.id ? 'is-selected' : ''"
-          >
-            <th>{{ index + 1 }}</th>
-            <td>{{ result.username }}</td>
-            <td>{{ msToElapsedString(result.totalTimeMilliseconds) }}</td>
-          </tr>
+        >
+          <th>{{ index + 1 }}</th>
+          <td>{{ result.username }}</td>
+          <td>{{ msToElapsedString(result.totalTimeMilliseconds) }}</td>
+        </tr>
         </tbody>
       </table>
     </div>

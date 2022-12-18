@@ -14,7 +14,8 @@
     "lint": "npm run lint-format && npm run lint-fix",
     "test-vitest": "vitest",
     "test-vitest-coverage": "vitest run --coverage",
-    "test-vitest-coverage-viewer": "start test/vitest/coverage/index.html"
+    "test-vitest-coverage-viewer": "start test/vitest/coverage/index.html",
+    "test-cypress-open:client": "cd client && npm run test-cypress-open && cd .."
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.13.0",
