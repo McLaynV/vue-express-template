@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "test-cypress-open": "cypress open"
+    "test-cypress-open": "cypress open",
+    "test-cypress-run-component": "cypress run --component",
+    "test-cypress-run-e2e": "cypress run"
   },
   "dependencies": {
     "@vueuse/core": "^7.7.0",

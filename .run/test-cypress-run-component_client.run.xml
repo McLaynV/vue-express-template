@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="test-cypress-open:client" type="js.build_tools.npm">
+  <configuration default="false" name="test-cypress-run-component:client" type="js.build_tools.npm">
     <package-json value="$PROJECT_DIR$/client/package.json" />
     <command value="run" />
     <scripts>
-      <script value="test-cypress-open" />
+      <script value="test-cypress-run-component" />
     </scripts>
     <node-interpreter value="project" />
     <envs />

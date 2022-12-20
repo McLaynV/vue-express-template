@@ -4,9 +4,7 @@
     "node": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -16,9 +14,7 @@
   ],
   "overrides": [
     {
-      "files": [
-        "*.vue"
-      ],
+      "files": ["*.vue"],
       "parser": "vue-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser"

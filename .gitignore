@@ -2,6 +2,7 @@
 node_modules
 dist
 test/vitest/coverage/*
+client/cypress/videos/*
 
 # local env files
 .env.local

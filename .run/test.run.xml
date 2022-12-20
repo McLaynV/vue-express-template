@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="test" type="CompoundRunConfigurationType">
+    <toRun name="test-cypress-run-component:client" type="js.build_tools.npm" />
+    <toRun name="test-vitest-coverage" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>
