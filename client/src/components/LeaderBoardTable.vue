@@ -13,11 +13,10 @@
         <tr
           v-for="(result, index) in results"
           :key="index"
-          :class="
-            (currentUserId === result.id ? 'is-selected' : '') +
-            ' row-' +
-            (index + 1)
-          "
+          :class="[
+            { 'is-selected': currentUserId === result.id },
+            `row-${index + 1}`,
+          ]"
         >
           <td class="rank">{{ index + 1 }}</td>
           <td class="username">{{ result.username }}</td>
