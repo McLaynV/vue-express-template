@@ -5,18 +5,20 @@ A full-stack app template based on [biggestcookie](https://github.com/biggestcoo
 
 Using:
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vue.js](https://vuejs.org/)
-- [Vite](https://vitejs.dev/)
-- [Pinia](https://pinia.vuejs.org/)
-- [Express.js](https://expressjs.com/)
-- [Sequelize](https://sequelize.org/v6/)
+- [TypeScript](https://www.typescriptlang.org/) strongly typed programming language that builds on JavaScript
+- [Vue.js](https://vuejs.org/) framework for building web user interfaces
+- [Vite](https://vitejs.dev/) frontend tools
+- [Pinia](https://pinia.vuejs.org/) Vue stores
+- [Express.js](https://expressjs.com/) web framework (backend)
+- [Sequelize](https://sequelize.org/v6/) ORM for Oracle, Postgres, MySQL, MariaDB, SQLite and SQL Server, and more
+- [Bulma](https://bulma.io/) CSS framework
 
 ...and some more preferred choices, such as:
 
-- [VueUse](https://vueuse.org/)
-- [Sass](https://sass-lang.com/)
+- [VueUse](https://vueuse.org/) Vue composition utilities
+- [Sass](https://sass-lang.com/) CSS extension language
 - [Vue setup syntax](https://vuejs.org/api/sfc-script-setup.html)
+  to declare props and emitted events using pure TypeScript
 
 ...and testing frameworks:
 
