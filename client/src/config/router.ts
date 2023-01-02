@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
+import MainPage from "../views/MainPage.vue";
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "MainPage",
+    component: MainPage,
     meta: {
       title: "welcome",
     },

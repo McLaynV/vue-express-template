@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Leaderboard from "../components/Leaderboard.vue";
-import Tos from "../components/Tos.vue";
+import LeaderBoard from "../components/LeaderBoard.vue";
+import TermsOfService from "../components/TermsOfService.vue";
 
 const tosComplete = ref(false);
 const submission = ref({
@@ -11,7 +11,7 @@ const submission = ref({
 
 /**
  * On Tos completion, record submitted username and time,
- * then mount Leaderboard component
+ * then mount LeaderBoard component
  */
 function onSubmitTos(username: string, totalTime: number) {
   submission.value = {
@@ -23,11 +23,11 @@ function onSubmitTos(username: string, totalTime: number) {
 </script>
 
 <template>
-  <section className="section">
-    <div className="columns is-centered">
-      <div className="column is-one-third">
-        <Tos v-if="!tosComplete" @submitTos="onSubmitTos" />
-        <Leaderboard
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <TermsOfService v-if="!tosComplete" @submitTos="onSubmitTos" />
+        <LeaderBoard
           v-else
           :totalTime="submission.totalTime"
           :username="submission.username"

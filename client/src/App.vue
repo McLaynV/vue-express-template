@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Navbar from "./components/Navbar.vue";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <div>
-    <Navbar />
+    <NavBar />
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" />

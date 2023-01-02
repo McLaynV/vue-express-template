@@ -46,27 +46,27 @@ function onSubmitUsername(event: Event) {
 
 <template>
   <div>
-    <div v-if="!termsSubmitted" className="content">
-      <div className="block">
-        <h2 className="has-text-centered">Welcome!</h2>
+    <div v-if="!termsSubmitted" class="content">
+      <div class="block">
+        <h2 class="has-text-centered">Welcome!</h2>
       </div>
-      <div className="block">
+      <div class="block">
         Please read all the terms and conditions, then press accept when you are
         done.
       </div>
-      <div className="has-text-centered">
+      <div class="has-text-centered">
         <div
-          className="content tos is-family-secondary has-text-justified"
+          class="content tos is-family-secondary has-text-justified"
           @scroll.passive="handleScroll"
         >
-          <div v-for="(text, index) in tosText" className="block" :key="index">
+          <div v-for="(text, index) in tosText" class="block" :key="index">
             {{ text }}
           </div>
         </div>
         <form @submit.prevent="onSubmitTime">
           <input
             type="submit"
-            className="button is-primary is-family-secondary"
+            class="button is-primary is-family-secondary"
             :disabled="!termsSubmitEnabled"
             value="Submit"
           />
@@ -74,15 +74,15 @@ function onSubmitUsername(event: Event) {
       </div>
     </div>
     <div v-else>
-      <div className="content has-text-centered">
-        <div className="title">
+      <div class="content has-text-centered">
+        <div class="title">
           <h2>Complete!</h2>
         </div>
         <form @submit.prevent="onSubmitUsername($event)">
-          <div className="field has-addons is-justify-content-center">
-            <div className="control">
+          <div class="field has-addons is-justify-content-center">
+            <div class="control">
               <input
-                className="input"
+                class="input"
                 type="text"
                 pattern="[A-Za-z0-9]+"
                 name="username"
@@ -93,8 +93,8 @@ function onSubmitUsername(event: Event) {
                 required
               />
             </div>
-            <div className="control">
-              <input type="submit" className="button is-primary" />
+            <div class="control">
+              <input type="submit" class="button is-primary" />
             </div>
           </div>
         </form>

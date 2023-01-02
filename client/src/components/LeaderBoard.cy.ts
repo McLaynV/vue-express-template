@@ -1,4 +1,4 @@
-import Leaderboard from "./Leaderboard.vue";
+import LeaderBoard from "./LeaderBoard.vue";
 import { SpeedrunData } from "../../../shared/models/speedrun-data";
 
 const propsList = [
@@ -59,7 +59,7 @@ function registerSpeedrunData(speedrun: SpeedrunData): SpeedrunData {
   return speedrun;
 }
 
-describe("<Leaderboard />", () => {
+describe("<LeaderBoard />", () => {
   for (const props of propsList) {
     const userId = registerUser(props.username);
     const bodySpeedrunsSubmit: SpeedrunData = {
@@ -103,7 +103,7 @@ describe("<Leaderboard />", () => {
         }
       ).as("postSpeedrunsSubmit");
 
-      cy.mount(Leaderboard, { props: props });
+      cy.mount(LeaderBoard, { props: props });
       cy.get("h2.title").should("contain.text", `${props.username}'s time:`);
 
       cy.wait([
