@@ -1,5 +1,9 @@
 import LeaderBoard from "./LeaderBoard.vue";
 import { SpeedrunData } from "../../../shared/models/speedrun-data";
+import {
+  PATH_SPEEDRUN_SUBMIT,
+  PATH_SPEEDRUNS,
+} from "../../../shared/constants";
 
 const propsList = [
   {
@@ -73,7 +77,7 @@ describe("<LeaderBoard />", () => {
       cy.intercept(
         {
           method: "GET",
-          url: "/api/speedruns/",
+          url: `${PATH_SPEEDRUNS}/`,
         },
         {
           statusCode: 200,
@@ -84,7 +88,7 @@ describe("<LeaderBoard />", () => {
       cy.intercept(
         {
           method: "GET",
-          url: `/api/speedruns/${userId}`,
+          url: `${PATH_SPEEDRUNS}/${userId}`,
         },
         {
           statusCode: 200,
@@ -95,7 +99,7 @@ describe("<LeaderBoard />", () => {
       cy.intercept(
         {
           method: "POST",
-          url: "/api/speedruns/submit",
+          url: `${PATH_SPEEDRUN_SUBMIT}`,
         },
         {
           statusCode: 201,

@@ -1,7 +1,17 @@
 import { test, expect } from "vitest";
-import { API_PREFIX } from "./index";
+import {
+  PATH_SPEEDRUN_SUBMIT,
+  PATH_SPEEDRUN_SUBMIT_SUFFIX,
+  PATH_SPEEDRUNS,
+} from "./index";
 
 test("constants index", async () => {
-  expect(API_PREFIX).toBeTruthy();
-  expect(API_PREFIX).toContain("/");
+  for (const c of [
+    PATH_SPEEDRUNS,
+    PATH_SPEEDRUN_SUBMIT_SUFFIX,
+    PATH_SPEEDRUN_SUBMIT,
+  ]) {
+    expect(c).toBeTruthy();
+    expect(c).toContain("/");
+  }
 });

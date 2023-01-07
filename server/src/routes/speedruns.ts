@@ -5,11 +5,14 @@ import {
 } from "../../../shared/models/speedrun-data";
 import { SpeedrunEntity } from "../db/speedrun-entity";
 import { UserEntity } from "../db/user-entity";
+import { PATH_SPEEDRUN_SUBMIT_SUFFIX } from "../../../shared/constants";
+
+const PARAM_ID = "id";
 
 const router = Router();
 
-router.get("/:id?", getMultipleSpeedruns);
-router.post("/submit", submitSpeedrun);
+router.get(`/:${PARAM_ID}?`, getMultipleSpeedruns);
+router.post(PATH_SPEEDRUN_SUBMIT_SUFFIX, submitSpeedrun);
 
 /**
  * Get top 10 speedruns
@@ -21,8 +24,8 @@ async function getMultipleSpeedruns(
   const results = await SpeedrunEntity.findAll({
     limit: 10,
     order: [["totalTimeMilliseconds", "ASC"]],
-    ...(request.params["id"] && {
-      where: { userId: request.params["id"] },
+    ...(request.params[PARAM_ID] && {
+      where: { userId: request.params[PARAM_ID] },
     }),
   });
   response.send(results.map((result) => result.get({ plain: true })));
