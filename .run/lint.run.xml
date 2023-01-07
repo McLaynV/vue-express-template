@@ -9,4 +9,8 @@
     <envs />
     <method v="2" />
   </configuration>
+  <configuration default="false" name="lint" type="CompoundRunConfigurationType">
+    <toRun name="lint" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
 </component>

@@ -4,6 +4,7 @@ import {
   PATH_SPEEDRUN_SUBMIT,
   PATH_SPEEDRUNS,
 } from "../../../shared/constants";
+import { createTestingPinia } from "@pinia/testing";
 
 const propsList = [
   {
@@ -107,7 +108,8 @@ describe("<LeaderBoard />", () => {
         }
       ).as("postSpeedrunsSubmit");
 
-      cy.mount(LeaderBoard, { props: props });
+      const global = { plugins: [createTestingPinia({ createSpy: cy.spy })] };
+      cy.mount(LeaderBoard, { global: global, props: props });
       cy.get("h2.title").should("contain.text", `${props.username}'s time:`);
 
       cy.wait([

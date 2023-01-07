@@ -30,7 +30,7 @@ onMounted(() => {
     <div class="block">
       <h2 class="title">{{ username }}&apos;s time:</h2>
       <p class="subtitle" v-if="store.submittedRun">
-        {{ msToElapsedString(store.submittedRun.totalTimeMilliseconds) }}
+        {{ msToElapsedString(store.submittedRun?.totalTimeMilliseconds) }}
       </p>
     </div>
     <LeaderBoardTable

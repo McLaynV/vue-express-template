@@ -40,8 +40,3 @@ interface Props {
 
 defineProps<Props>();
 </script>
-<script lang="ts">
-export default {
-  name: "LeaderBoardTable",
-};
-</script>

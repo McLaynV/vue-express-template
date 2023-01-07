@@ -18,6 +18,7 @@
   "include": [
     "./src",
     "../shared",
+    "node_modules/@pinia/testing/dist/index.d.ts",
     "node_modules/cypress/types/cypress-global-vars.d.ts",
     "cypress/support/component.ts"
   ]
