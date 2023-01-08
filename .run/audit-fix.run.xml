@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="audit-fix" type="CompoundRunConfigurationType">
+    <toRun name="audit-fix:_" type="js.build_tools.npm" />
+    <toRun name="audit-fix:client" type="js.build_tools.npm" />
+    <toRun name="install:server" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>
