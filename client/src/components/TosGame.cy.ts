@@ -21,6 +21,7 @@ describe("<TosGame />", () => {
     cy.get("div.tos").scrollTo("top");
     cy.get("form input.button").should("be.enabled");
 
+    cy.get("@submitSpy").should("not.have.been.called");
     cy.get("form input.button").click();
     cy.get("@submitSpy").should("have.been.calledOnce");
   });
